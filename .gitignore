@@ -1,0 +1,12 @@
+.idea
+build
+public/build
+public/assets
+node_modules
+**/npm-debug.log
+rethinkdb_data
+rethinkdb_data2
+userfiles
+codata
+jsondata
+timeline
