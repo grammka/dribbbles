@@ -1,26 +1,35 @@
-import config from '../../config'
-
-const filename = {
-  context: config.paths.build,
-  name: 'assets/static/[ext]/[name].[hash:6].[ext]'
-}
+import path from 'path'
 
 export default [
   {
-    test: /\.(png|ico|jpg|jpeg|gif)$/,
-    loader: 'url',
+    test   : /\.(png|ico|jpg|jpeg|gif|svg(\?.*)?)$/,
+    loader : 'file',
     query: {
-      ...filename,
-      limit: 8192
-    }
-  },
-  {
-    test: /\.svg(\?.*)?$/,
-    loader: 'url',
-    query: {
-      ...filename,
-      limit: 10000,
-      mimetype: 'image/svg+xml'
+      context: path.join(__dirname, '../../build'),
+      name: 'images/[name].[ext]'
     }
   }
 ]
+
+
+// import path from 'path'
+//
+//
+// const query = {
+//   context: path.join(__dirname, '../../build'),
+//   name: 'images/[ext]/[name]_[hash:6].[ext]',
+// }
+//
+// export default [
+//   {
+//     test: /\.(png|ico|jpg|jpeg|gif)$/,
+//     loader: 'file',
+//     query
+//   },
+//   {
+//     test: /\.svg(\?.*)?$/,
+//     loader: 'file',
+//     query
+//   },
+// ]
+

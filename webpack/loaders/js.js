@@ -1,10 +1,7 @@
 export default [
   {
-    test: /\.(js|jsx)$/,
-    exclude: /node_modules/,
-    loader: 'babel',
-    query: {
-      cacheDirectory: true
-    }
+    test: /\.js$/,
+    loaders: [ 'react-hot', 'babel' ],
+    exclude: /node_modules/
   }
 ]

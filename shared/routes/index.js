@@ -1,13 +1,19 @@
 import React from 'react'
-import { Router, Route, browserHistory } from 'react-router'
+import { Route } from 'react-router'
 
-import App from 'containers/App'
+import MainLayout from 'containers/_layouts/Main'
+import InsideLayout from 'containers/_layouts/Inside'
+
+import Home from 'containers/Home'
 
 
 export default (
-  <Router history={ browserHistory }>
-    <Route path="/" component={ App }>
-      <Route path="" component={ App }/>
+  <Route>
+    <Route component={MainLayout}>
+      <Route path="/" component={Home} />
     </Route>
-  </Router>
+    <Route component={InsideLayout}>
+      
+    </Route>
+  </Route>
 )
