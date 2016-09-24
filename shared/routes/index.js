@@ -12,6 +12,7 @@ export default (
   <Route>
     <Route component={MainLayout}>
       <Route path="/" component={Home} />
+      <Route path="/dribbbles" component={Home} />
     </Route>
     <Route component={InsideLayout}>
       {

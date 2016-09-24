@@ -1,0 +1,161 @@
+.container
+  height: 350px
+  margin-top: 40px
+  position: relative
+
+
+.arrow
+  width 40px
+  height: 30px
+  line-height: 40px
+  absolute top 50%
+  margin-top: -100px
+  overflow: hidden
+  cursor: pointer
+  color #fff
+  font-size: 40px
+  &:before
+    content ''
+    display: block
+    height: 2px
+    background-color: #fff
+    absolute top 50% left 1px right 1px
+    margin-top: -1px
+  &:after
+    content ''
+    display: block
+    size 60px
+    border 2px solid #fff
+    transform rotate(45deg)
+    absolute top 50%
+    margin-top: -30px
+  &:hover
+    &:before
+      background-color: #ff1451
+    &:after
+      border-color #ff1451
+
+.arrowLeft
+  left 8px
+  &:after
+    left 12px
+
+.arrowRight
+  right 8px
+  &:after
+    right 12px
+
+
+.date
+  absolute bottom -5px left 0
+  text-align: center
+  color #fff
+  font-family: 'PFDinTextCondPro-Thin'
+
+.month
+  text-transform: uppercase
+  font-size: 32px
+
+.day
+  font-size: 64px
+  font-family: 'PFDinTextCondPro-Regular'
+
+.year
+  font-size: 32px
+
+
+.card
+  width: 280px
+  padding 40px 20px 0
+  background-color: rgba(0, 0, 33, 0.79)
+  absolute right 100px bottom 0 top 0
+  color #fff
+  box-shadow rgba(184, 131, 255, 0.3) 0 0 90px 5px
+
+.cardTitle
+  margin-bottom: 10px
+  font-size: 22px
+
+.cardAddress
+  text-transform: uppercase
+  font-size: 16px
+  color rgba(193, 184, 228, 0.6)
+
+.cardTimeContainer
+  margin 42px 0 30px
+
+.cardTimePipe
+  width: 1px
+  height: 100%
+  background-color: rgba(152, 133, 230, 0.3)
+
+.cardTimeValue
+  font-size: 34px
+
+.cardTimeTitle
+  text-transform: uppercase
+  font-size: 16px
+
+.cardBookButton
+  height: 50px
+  line-height: 52px
+  background-color: #ff1451
+  cursor: pointer
+  text-transform: uppercase
+  text-align: center
+  font-size: 18px
+  color #fff
+  no-select()
+  :global(.fa)
+    margin-right: 15px
+  &:hover
+    background-color: darken(#ff1451, 10%)
+  &:active
+    background-color: darken(#ff1451, 15%)
+
+.cardDeadline
+  border-top 1px dashed rgba(152, 133, 230, 0.5)
+  padding-top: 20px
+  margin-top: 20px
+  text-transform: uppercase
+  text-align: center
+  font-size: 18px
+
+
+.content
+  absolute bottom 0 left 100px right 420px
+  color #fff
+
+.title
+  margin-bottom: 20px
+  font-size: 38px
+
+.label
+  margin 9px 0 0 9px
+  height: 24px
+  line-height: 26px
+  background-color: #ff1451
+  padding 0 12px
+  cursor: default
+  text-transform: uppercase
+  font-size: 16px
+  border-radius 2px
+  no-select()
+  display-inline-block()
+
+.genre
+  background-color: rgba(0,0,33, 0.79)
+  margin-bottom: 25px
+  height: 36px
+  line-height: 36px
+  border 1px solid #fff
+  padding 0 12px
+  cursor: default
+  text-transform: lowercase
+  font-size: 18px
+  no-select()
+  display-inline-block()
+
+.notice
+  text-transform: uppercase
+  font-size: 16px

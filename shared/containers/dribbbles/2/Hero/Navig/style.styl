@@ -1,0 +1,49 @@
+.container
+  height: 600px
+  background-color: #020228
+  background-size auto 600px
+  background-position: 100%
+  background-repeat: no-repeat
+  font-family: 'PFDinTextCondPro-Regular'
+
+.center
+  width: 1100px
+  margin 0 auto
+
+
+.header
+  height: 60px
+  background-color: #00001f
+
+.navig
+  border-bottom: 1px solid rgba(152, 133, 230, 0.3)
+  margin-top: 60px
+  font-size: 0
+  no-select()
+
+.navigItem
+  line-height: 40px
+  margin-left: 50px
+  cursor: pointer
+  text-transform: uppercase
+  font-size: 18px
+  color rgba(221, 223, 255, 0.9)
+  display-inline-block()
+  &:after
+    content ''
+    display: none
+    border-bottom: 3px solid
+    margin-bottom: -1px
+  &:first-child
+    margin-left: 0
+  &:hover
+    color #fff
+    &:after
+      display: block
+      border-color #550735
+  &.active
+    cursor: default
+    color #fff
+    &:after
+      display: block
+      border-color #ff1451

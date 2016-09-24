@@ -5,6 +5,7 @@ import Icon from 'react-fa'
 import CSSModules from 'react-css-modules'
 import style from './style'
 
+import Container from 'components/Container'
 import Avatar from 'components/Avatar'
 
 
@@ -82,9 +83,8 @@ export default class Dribbble_1 extends React.Component {
   render() {
     const { cards } = this.props
 
-
     return (
-      <div styleName="container">
+      <Container width={900}>
         <div styleName="cards">
           {
             cards.map((card, index) => {
@@ -148,7 +148,7 @@ export default class Dribbble_1 extends React.Component {
             })
           }
         </div>
-      </div>
+      </Container>
     )
   }
 }
