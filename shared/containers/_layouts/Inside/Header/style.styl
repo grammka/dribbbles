@@ -1,0 +1,108 @@
+.container
+  height: 50px
+  background-color: #fff
+  border-bottom 1px solid #000
+  fixed top 0 left 0 right 0
+  color #000
+
+.arrow
+  width 30px
+  height: 20px
+  line-height: 40px
+  absolute top 50%
+  margin-top: -10px
+  overflow: hidden
+  cursor: pointer
+  &:before
+    content ''
+    display: block
+    height: 2px
+    background-color: #000
+    absolute top 50% left 1px right 1px
+    margin-top: -1px
+  &:after
+    content ''
+    display: block
+    size 60px
+    border 2px solid #000
+    transform rotate(45deg)
+    absolute top 50%
+    margin-top: -30px
+  &:hover
+    &:before
+      background-color: #ff1451
+    &:after
+      border-color #ff1451
+
+.arrowLeft
+  left 15px
+  &:after
+    left 12px
+
+.arrowRight
+  right 15px
+  &:after
+    right 12px
+
+
+.content
+  max-width 1100px
+  height: 100%
+  margin 0 auto
+  position: relative
+  font-size: 20px
+  color #000
+
+.contentFlex
+  absolute top 0 left 0 right 0 bottom 0
+
+.likeThisContainer
+  position: relative
+  z-index: 20
+
+.likeThis
+  height: 34px
+  line-height: 31px
+  border 2px solid #ff1451
+  padding 0 15px
+  cursor: pointer
+  text-transform: uppercase
+  font-weight: 600
+  font-size: 14px
+  color #ff1451
+  no-select()
+  &:hover
+    background-color: #ff1451
+    color #fff
+
+.nameContainer
+  line-height: 51px
+  absolute top 0 left 0 right 0
+  text-transform: uppercase
+  text-align: center
+
+.name
+  font-size: 24px
+  text-decoration: none !important
+  color #000 !important
+  display-inline-block()
+
+.authorContainer
+  position: relative
+  z-index: 20
+
+.authorName
+  text-decoration: none !important
+  color #000 !important
+  font-size: 18px
+
+.author
+  cursor: pointer
+  text-align: right
+  font-size: 15px
+  color #ff1451
+  &:hover
+    color: darken(#ff1451, 15%)
+
+.avatar
+  margin-left: 15px

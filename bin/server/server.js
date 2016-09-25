@@ -8,7 +8,7 @@ import config from '../../webpack'
 
 
 const isDeveloping = process.env.NODE_ENV !== 'production'
-const port = process.env.PORT || 3040
+const port = process.env.PORT || 3050
 const app = express()
 
 
