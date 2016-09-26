@@ -44,8 +44,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Dribbbles!',
-      template: `!!handlebars!${ path.join(paths.base, 'client/assets/index.html') }`,
+      template: `!!handlebars!${path.join(paths.base, 'client/assets/index.html')}`,
       filename: 'index.html',
+      favicon: path.join(paths.base, 'client/assets/images/favicon.ico'),
       hash: false,
       cache: true,
       inject: 'body'
@@ -58,12 +59,10 @@ module.exports = {
 
   htmlWebpackPlugin: {
     files: {
-      bigLogo: 'assets/images/big_logo.png',
-      icon: 'assets/images/icon.png',
       chunks: {
         app: {
           entry: paths.client,
-          logo: [ 'assets/images/icon.png' ]
+          icon: [ 'assets/images/favicon.ico' ]
         }
       }
     }

@@ -15,6 +15,8 @@ export default class Home extends React.Component {
   render() {
     return (
       <div styleName="container">
+        <div styleName="title">Dribbbles from <Href redirect="http://dribbble.com">dribbble.com</Href> I converted to HTML</div>
+
         <div styleName="cards">
           {
             dribbles.map((dribbble, index) => {
