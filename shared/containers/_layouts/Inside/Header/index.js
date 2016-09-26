@@ -14,19 +14,16 @@ import dribbbles from '../../../dribbbles/info'
 export default class InsideLayoutHeader extends React.Component {
   render() {
     const currentDribbleNum = Number(window.location.href.match(/\d+$/)[0])
-    const prevVisible = currentDribbleNum != 1
     const nextVisible = currentDribbleNum != dribbbles.length
 
     const { name, link, author: { name: authorName, avatar, link: authorLink } } = dribbbles[currentDribbleNum - 1]
 
+    const prevLink = currentDribbleNum == 1 ? '/' : `/dribbbles/${currentDribbleNum - 1}`
+
 
     return (
       <div styleName="container">
-        {
-          prevVisible && (
-            <Href styleName="arrow arrowLeft" to={`/dribbbles/${currentDribbleNum - 1}`} />
-          )
-        }
+        <Href styleName="arrow arrowLeft" to={prevLink} />
         {
           nextVisible && (
             <Href styleName="arrow arrowRight" to={`/dribbbles/${currentDribbleNum + 1}`} />

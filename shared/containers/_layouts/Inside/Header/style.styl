@@ -1,3 +1,6 @@
+$header-color = #46ce00 //#ff1451
+
+
 .container
   height: 50px
   background-color: #fff
@@ -30,9 +33,9 @@
     margin-top: -30px
   &:hover
     &:before
-      background-color: #ff1451
+      background-color: $header-color
     &:after
-      border-color #ff1451
+      border-color $header-color
 
 .arrowLeft
   left 15px
@@ -56,6 +59,7 @@
 .contentFlex
   absolute top 0 left 0 right 0 bottom 0
 
+
 .likeThisContainer
   position: relative
   z-index: 20
@@ -63,17 +67,18 @@
 .likeThis
   height: 34px
   line-height: 31px
-  border 2px solid #ff1451
+  border 2px solid $header-color
   padding 0 15px
   cursor: pointer
   text-transform: uppercase
   font-weight: 600
   font-size: 14px
-  color #ff1451
+  color $header-color
   no-select()
   &:hover
-    background-color: #ff1451
+    background-color: $header-color
     color #fff
+
 
 .nameContainer
   line-height: 51px
@@ -87,7 +92,9 @@
   color #000 !important
   display-inline-block()
 
+
 .authorContainer
+  line-height: 17px
   position: relative
   z-index: 20
 
@@ -97,12 +104,10 @@
   font-size: 18px
 
 .author
-  cursor: pointer
+  cursor: default
   text-align: right
   font-size: 15px
-  color #ff1451
-  &:hover
-    color: darken(#ff1451, 15%)
+  color $header-color
 
 .avatar
   margin-left: 15px
