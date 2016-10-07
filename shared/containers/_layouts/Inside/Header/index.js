@@ -31,11 +31,13 @@ export default class InsideLayoutHeader extends React.Component {
         }
         <div styleName="content">
           <Flex styleName="contentFlex" justify="space-between" align="center">
-            <Box>
-              <div styleName="likeThisContainer">
-                <div styleName="likeThis">Like this</div>
-              </div>
-            </Box>
+            {/*
+             <Box>
+             <div styleName="likeThisContainer">
+             <div styleName="likeThis">Like this</div>
+             </div>
+             </Box>
+            */}
             <Box auto>
               <div styleName="nameContainer">
                 <Href styleName="name" redirect={link}>{name}</Href>
